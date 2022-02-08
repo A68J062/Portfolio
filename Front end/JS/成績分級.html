@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07-判斷</title>
+</head>
+
+<body>
+    成績：<input type="number" id="score"><br>
+    結果：<span type="text" id="result"><br>
+    <button id="btn">判斷</button>
+    <script>
+        var scoreEle = document.querySelector('#score');
+        var resultEle = document.querySelector('#result');
+        var btnEle = document.querySelector('#btn');
+        console.log(scoreEle,resultEle,btnEle);
+
+        btnEle.addEventListener('click',function(){
+            var score = Number(scoreEle.value);
+            var result ='';
+            if (score >= 100){
+                result = '請輸入0~100的數字';
+            }
+
+            else if (score >= 90){
+                result = 'S';
+            }
+
+            else if(score >= 80){
+                result = 'A';
+            }
+
+            else if(score >= 70){
+                result = 'B';
+            }
+
+            else if(score >= 60){
+                result = 'C';
+            }
+
+            else{
+                result ='D'
+            }
+
+            // if else if用來判斷同一件事
+            resultEle.textContent = result;
+        });
+    </script>
+</body>
+</html>

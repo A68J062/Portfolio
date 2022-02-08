@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07-換圖片</title>
+</head>
+<body>
+    <img src="./img/cat01.jpg" alt="" width="200" id="img">
+    <button id="next">下一張</button>
+
+    <script>
+        var imgEle = document.querySelector('#img');
+        var nextEle = document.querySelector('#next');
+
+        nextEle.addEventListener('click',function(){
+            var imgUrl = imgEle.getAttribute('src'); 
+            
+            if( imgUrl == './img/cat01.jpg'){
+                imgEle.setAttribute('src','./img/cat02.jpg');
+            }
+
+            else if(imgUrl == './img/cat02.jpg'){
+                imgEle.setAttribute('src','./img/cat03.jpg');
+            }
+    
+            else{
+                imgEle.setAttribute('src','./img/cat01.jpg');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div>Hello World!</div>
+    <button>按我</button>
+
+    <script>
+
+        // 取得html元素
+        var divElement = document.querySelector('div');
+        // console.log(divElement.innerText); 顯示html內div值
+        console.log(divElement.innerText);
+
+        // 取得按鈕元素
+        var btn = document.querySelector('button');
+        // 監聽事件
+        btn.addEventListener('click',function(){
+            // 彈跳視窗
+            alert('叫你按就按喔');
+        });
+
+    </script>
+
+</body>
+</html>

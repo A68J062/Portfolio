@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>07-parallax捲動檢討</title>
+	<style>
+		* {
+			box-sizing: border-box;
+			font-family: 'Times New Roman', Times, serif;
+		}
+
+		body {
+			margin: 0;
+		}
+
+		.background-full {
+			position: relative;
+			width: 100%;
+			height: 100vh;
+			background-image: url("https://images8.alphacoders.com/601/thumb-1920-601973.jpg");
+			background-position: center;
+			background-size: cover;
+			background-attachment: fixed;
+			z-index: 2px;
+		}
+
+		.black-title {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			padding: 15px 30px;
+			background-color: rgb(0, 0, 0 ,0.8);
+			color: white;
+		}
+
+		.description {
+			padding: 70px 80px;
+		}
+
+		.description h2 {
+			text-align: center;
+		}
+
+		.description p {
+			text-align: justify;
+			color: gray;
+			line-height: 24px;
+		}
+
+		.background-half {
+			position: relative;
+			width: 100%;
+			height: 30vh;
+			background-size: cover;
+			background-attachment: fixed;
+		}
+
+		.bg-1 {
+			background-image: url("https://pobedarf.ru/wp-content/uploads/2021/09/fb-kosmos-i-nebo-123-870x522.jpg");
+		}
+
+		.bg-2 {
+			background-image: url("http://up.8desk.com/6/pic/4f/f9/3c/4ff93c6082cece16624e452e132e2094.jpg");
+		}
+
+		.white-title {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			color: #eee;
+		}
+
+		.background-text {
+			padding: 55px 80px;
+			background-color: #282E34;
+			color: white;
+		}
+
+		ul{
+			padding: 0;
+			margin: 0;
+			list-style: none;
+		}
+
+		ul li{
+			display: inline;
+		}
+
+		ul li a{
+			display: inline-block;
+			text-decoration:none;
+			padding: 3px 6px;
+			border: solid 2px white;
+			background-color: black;
+			border-radius: 5px;
+			color: white;
+		}
+
+		#logo{
+			position: fixed;
+			padding: 20px;
+			z-index: 1;
+		}
+
+		#menu{
+			position: fixed;
+			right:20px;
+			top: 20px;
+			z-index: 1;
+			border-radius: 3px;
+			text-align: center;
+			padding: 5px;
+		}
+
+	</style>
+</head>
+<body>
+	<!-- 先畫出來的會被後畫出來的蓋住 -->
+	<ul id="logo">
+		<li><a href="#top-bg">LOGO</a></li>
+	</ul>
+
+	<ul id="menu">
+		<li><a href="#description">A</a></li>
+		<li><a href="#title-1">B</a></li>
+		<li><a href="#bottom-title">C</a></li>
+	</ul>
+	</div>
+	
+
+	<div class="background-full" id="top-bg">
+		<h1 class="black-title">SCROLL DOWN</h1>
+	</div>
+	<div class="description" id="description">
+		<h2>PARALLAX DEMO</h2>
+		<p>
+			Parallax scrolling is a web site trend where the background content is moved at a different speed than the foreground content while scrolling. Nascetur per nec posuere turpis, lectus nec libero turpis nunc at, sed posuere mollis ullamcorper libero ante lectus, blandit pellentesque a, magna turpis est sapien duis blandit dignissim. Viverra interdum mi magna mi, morbi sociis. Condimentum dui ipsum consequat morbi, curabitur aliquam pede, nullam vitae eu placerat eget et vehicula. Varius quisque non molestie dolor, nunc nisl dapibus vestibulum at, sodales tincidunt mauris ullamcorper, dapibus pulvinar, in in neque risus odio. Accumsan fringilla vulputate at quibusdam sociis eleifend, aenean maecenas vulputate, non id vehicula lorem mattis, ratione interdum sociis ornare. Suscipit proin magna cras vel, non sit platea sit, maecenas ante augue etiam maecenas, porta porttitor placerat leo.
+		</p>
+	</div>
+	<div class="background-half bg-1">
+		<h1 class="white-title" id="title-1">LESS HEIGHT</h1>
+	</div>
+	<div class="background-text">
+		<p>
+			Scroll up and down to really get the feeling of how Parallax Scrolling works.
+		</p>
+	</div>
+	<div class="background-half bg-2">
+		<h1 class="white-title">SCROLL UP</h1>
+	</div>
+	<div class="background-text">
+		<p>
+			Scroll up and down to really get the feeling of how Parallax Scrolling works.
+		</p>
+	</div>
+	<div class="background-full" id="bottom-title">
+		<h1 class="black-title">COOL!</h1>
+	</div>
+</body>
+</html>

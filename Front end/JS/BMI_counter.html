@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07-BMI計算器</title>
+</head>
+<body>
+    身高(cm)：<input id="height" type="number"><br>
+    體重(kg)：<input id="weight" type="number"><br>
+    BMI：<label id="result"></label><br>
+    <button id="calc">計算</button>
+    <button id="clear">清除</button>
+
+    <script>
+        var heightEle = document.querySelector('#height');
+        var weightEle = document.querySelector('#weight');
+        var resultEle = document.querySelector('#result');
+        var calcEle = document.querySelector('#calc');
+        var clearEle = document.querySelector('#clear');
+
+        calcEle.addEventListener('click',function(){
+            var height = Number(heightEle.value) / 100;
+            var weihgt = Number(weightEle.value);
+            var bmi = Math.round(( weihgt / height ** 2) * 100) / 100;
+        
+            var result ='';
+            if (bmi >= 35){
+                result = '重度肥胖';
+            }
+
+            else if (bmi >= 30){
+                result = '中度肥胖';
+            }
+
+            else if (bmi >= 27){
+                result = '輕度肥胖';
+            }
+
+            else if (bmi >= 24){
+                result = '體重過重';
+            }
+
+            else if (bmi >= 18.5){
+                result = '體重正常';
+            }
+
+            else{
+                result = '體重過輕';
+            }
+
+            resultEle.textContent = bmi + result;
+
+            clearEle.addEventListener('click',function(){
+                heightEle.value = '';
+                weightEle.value = '';
+                resultEle.value = '';
+            })
+        })
+    </script>
+</body>
+</html>
